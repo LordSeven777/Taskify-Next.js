@@ -1,0 +1,7 @@
+:root {
+  --navbar-height: 60px;
+}
+
+#navbar {
+  height: var(--navbar-height);
+}
