@@ -1,5 +1,6 @@
-import "./globals.css";
+import { Metadata } from "next";
 
+import "./globals.css";
 import Navbar from "./Navbar";
 import NextAuthProvider from "./NextAuthProvider";
 
@@ -11,9 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body suppressHydrationWarning={true}>
         <NextAuthProvider>
           <div className="main-body">
+            {/* @ts-expect-error Async Server Component */}
             <Navbar />
             {children}
           </div>
@@ -22,3 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Taskify",
+};
