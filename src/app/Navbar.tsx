@@ -1,8 +1,8 @@
 import { getServerSession } from "next-auth";
 
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import NavbarLinks from "./NavbarLinks";
 import "./Navbar.css";
-import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 export default async function Navbar() {
   const session = await getServerSession(authOptions);

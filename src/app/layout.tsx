@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-import "./globals.css";
 import Navbar from "./Navbar";
-import NextAuthProvider from "./NextAuthProvider";
+import Providers from "./Providers";
+import "./globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,13 +13,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <head />
       <body suppressHydrationWarning={true}>
-        <NextAuthProvider>
+        <Providers>
           <div className="main-body">
             {/* @ts-expect-error Async Server Component */}
             <Navbar />
             {children}
           </div>
-        </NextAuthProvider>
+        </Providers>
       </body>
     </html>
   );

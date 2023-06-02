@@ -1,13 +1,13 @@
 import React from "react";
 import { getServerSession } from "next-auth";
 
-import DeleteTaskModalProvider from "./DeleteTaskModalProvider";
+import DeleteTaskModalProvider from "../../features/tasks/DeleteTaskModalProvider";
 import { PartialTaskAttributes } from "@/types/task";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import TaskItem from "./TaskItem";
-import AddTaskSection from "./AddTaskSection";
-import TasksDateSection from "./TasksDateSection";
-import DeleteTaskModal from "./DeleteTaskModal";
+import TaskItem from "../../features/tasks/TaskItem";
+import AddTaskSection from "../../features/tasks/AddTaskSection";
+import TasksDateSection from "../../features/tasks/TasksDateSection";
+import DeleteTaskModal from "../../features/tasks/DeleteTaskModal";
 
 interface TasksPageSearchParams {
   date?: string;

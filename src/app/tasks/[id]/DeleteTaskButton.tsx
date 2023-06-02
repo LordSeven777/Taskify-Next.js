@@ -4,8 +4,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 import { TaskAttributes } from "@/types/task";
-import DeleteTaskModalProvider, { deleteTaskContext } from "../DeleteTaskModalProvider";
-import DeleteTaskModal from "../DeleteTaskModal";
+import DeleteTaskModalProvider, { deleteTaskContext } from "../../../features/tasks/DeleteTaskModalProvider";
+import DeleteTaskModal from "../../../features/tasks/DeleteTaskModal";
 
 export interface DeleteTaskButtonProps {
   task: TaskAttributes;

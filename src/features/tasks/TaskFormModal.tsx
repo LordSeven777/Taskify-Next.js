@@ -2,9 +2,9 @@
 
 import React, { ChangeEvent, FormEvent, useReducer } from "react";
 
-import Modal from "./Modal";
+import Modal from "../../components/Modal";
 import { TaskMutationPayload } from "@/types/task";
-import FormField from "./FormField";
+import FormField from "../../components/FormField";
 
 export interface TaskFormModalProps {
   show?: boolean;

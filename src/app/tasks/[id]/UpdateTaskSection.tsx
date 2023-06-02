@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-import TaskFormModal from "@/components/TaskFormModal";
+import TaskFormModal from "@/features/tasks/TaskFormModal";
 import { TaskMutationPayload, TaskAttributes } from "@/types/task";
 import isApiError from "@/helpers/is-api-error.helper";
 
