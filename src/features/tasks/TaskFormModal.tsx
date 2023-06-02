@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ChangeEvent, FormEvent, useReducer } from "react";
+import React, { ChangeEvent, FormEvent, useReducer, useEffect } from "react";
 
 import Modal from "../../components/Modal";
 import { TaskMutationPayload } from "@/types/task";
@@ -42,6 +42,11 @@ export default function TaskFormModal({
       ({ ...data, ...payload } as TaskMutationPayload),
     payload,
   );
+
+  useEffect(() => {
+    if (show) setData(payload);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [show]);
 
   function handleChange(field: keyof TaskMutationPayload) {
     return (

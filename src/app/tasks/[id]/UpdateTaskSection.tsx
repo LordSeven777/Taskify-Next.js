@@ -59,6 +59,7 @@ export default function UpdateTaskSection({ task }: UpdateTaskSectionProps) {
     }),
     [task],
   );
+  console.log({ payload });
 
   async function handleSubmit(payload: TaskMutationPayload) {
     if (status === "loading") return;
