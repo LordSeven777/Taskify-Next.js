@@ -35,7 +35,7 @@ export default async function TasksPage({ searchParams }: { searchParams: TasksP
 
   let tasks: PartialTaskAttributes[];
   try {
-    tasks = await getTasks({ token: session.accessToken, userId: session.id, date: searchParams.date });
+    tasks = await getTasks({ token: session.accessToken, userId: session.id, date: searchParams?.date });
   } catch (error) {
     console.log(error);
     return null;
