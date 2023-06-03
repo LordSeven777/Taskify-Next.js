@@ -1,4 +1,12 @@
+# Taskify
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Description
+This is an application where you can manage your tasks. This application shares the same database as my another project that is the same project but created with react.
+
+## Live URL
+This application is live at the following URL: https://taskify-next-js.vercel.app/
 
 ## Getting Started
 
