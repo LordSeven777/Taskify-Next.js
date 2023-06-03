@@ -10,7 +10,7 @@ export default function TasksDateSection() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  const dateQuery = searchParams.get("date");
+  const dateQuery = searchParams?.get("date");
   const date = useMemo(() => (dateQuery ? new Date(dateQuery) : new Date()), [dateQuery]);
   const readableDate = useMemo(() => {
     return new Intl.DateTimeFormat("en-US", {
